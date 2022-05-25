@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,intial-scale=1">
+ <title>Egyptian Food restaurant</title>
+	<link rel="icon"href="44.png">
+	<link rel="stylesheet"  href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body style="height:1200px;">
+	<nav>
+			<a href="#" class="logo">Egyptian Food
+	
+			</a>
+
+			<input id="menuBtn" class='checkbox--input' type="checkbox">
+			<label for="menuBtn" class="checkbox--label">
+				<i class='fa fa-bars'></i>
+			</label>
+			<ul class="navigation">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="menu.html">Menu</a></li>
+					<li><a href="expert.html">Team</a></li>
+					<li><a href="contact.html">sign up</a></li>
+			</ul>
+	</nav>
+<div class="boxfo">
+  <div class="contentfo">
+   <h2><span>W</span>elcome</h2>
+	 <p>Sign up now!!</p>
+	 <form class="form" id="form" action="index.html" method="get" onsubmit="return validation();">
+<table class="tform">
+	<tr>
+
+	<td><label for="fname">First name:</label></td>
+  <td><input type="text" name="fname" id="fname" required>
+	<div><span id="error9"></span></div>
+	</td>
+	</tr>
+	<tr>
+		  <td><label for="lname">Last name:</label></td>
+     <td><input type="text" name="lname" id="lname" required>
+			 <div><span id="error10"></span></div>
+
+		 </td>
+	</tr>
+<tr>
+	  <td><label for="email">E-mail: </label></td>
+    <td> <input type="email" name="email" id="email" required></td>
+	</tr>
+	<tr>
+
+	<td>	<label for="password">password </label></td>
+	<td><input  name="password" type="password"  id ="password"  required>
+  <div id="error">
+   <span id="error1"></span><span id="error2"></span><span id="error3"></span><span id="error4"></span><span id="error5"></span><span id="error6"></span><span id="error7"></span><span id="error8"></span>
+  </div>
+	</td>
+
+	</tr>
+	<tr>
+		<td><label for="password">confirm password</label></td>
+		<td><input name="passward" type="password"  id="conpass" </td>
+	</tr>
+	<tr>
+	<td>  <label for="address">Address:</label></td>
+  <td>  <input type="text" name="address" required></td>
+	</tr>
+	<tr>
+
+  <td>  <label for="phone">Phone number:</label></td>
+  <td> <input type="tel" id="phone" name="phone" placeholder="01[1:5]xxxxxx" pattern="^01[0-2,5]\d{8}$" required></td>
+</tr>
+<tr>
+	<td>    <label for="gender">Gender:</label></td>
+<td class="gender">
+	<input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female" required>
+  <label for="female">Female</label><br>
+</td>
+</tr>
+<tr>
+	 <td><input type="submit" name="submit" class="submit" value="submit" ></td>
+</tr>
+</table>
+  </form>
+</div>
+</div>
+<footer>
+<h1><span>C</span>ontact Us </h1>
+<div class="contfoot">
+
+	<div class="ohour">
+		<h2>Open hours</h2>
+<p>Every day:</p>
+<p>opens:9 am.</p>
+<p>closes:2 am. </p>
+</div>
+<div class="iconsf">
+  <h2>Social media</h2>
+	<a href="https://www.facebook.com/Egyptianfood/" target="_blank"><i class='fa fa-facebook'>acebook</i></a>
+	<a href="https://website-3456851103735808619245-restaurant.business.site/?utm_source=gmb&utm_medium=referral#details" target="_blank"><i class='fa fa-google'>oogle</i></a>
+	<a href="https://www.instagram.com/Egyptianfoodstreet/" target="_blank"><i class='fa fa-instagram'>instagram</i></a>
+</div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+function validation(){
+  // store the value that user enter in variables
+
+	var fname = document.getElementById('fname').value;
+  var lname =  document.getElementById('lname').value;
+   var password = document.getElementById('password').value;
+   var form = document.getElementById('form');
+var conpass = document.getElementById('conpass').value;
+ var flag=0;
+
+
+  if(fname.length<3){
+    document.getElementById("error9").innerHTML = "first Name must be more than 2 letters";
+
+  }
+ if(lname.length<3){
+  document.getElementById("error10").innerHTML = "last Name must be more than 2 letters";
+
+}
+
+
+
+   if(password.search(/[ ]/)!=-1){
+     document.getElementById("error1").innerHTML = "password must not include space, ";
+
+flag++;
+ }
+  // limit the lenght of the  pass
+   if(password.length != 8 ){
+     document.getElementById("error2").innerHTML = "Password must not be more than 8 and less than 8, ";
+		 flag++;
+      }
+    // must enclud numbers
+  if(password.search(/[0-9]/)==-1){
+
+    document.getElementById("error3").innerHTML = "password must incluce at least a number, ";
+		flag++;
+
+      }
+  //not to accept without upper characters
+ if(password.search(/[A-Z]/)==-1){
+   document.getElementById("error4").innerHTML = "password must include at least 1 upper character, ";
+	 flag++;
+
+  }
+  // not to accept without lower characters
+ if(password.search(/[a-z]/)==-1){
+    document.getElementById("error5").innerHTML = "password must include at least 1 lowwer character, ";
+		flag++;
+
+  }
+  // not accept without special characters
+   if(password.search(/[!\@\#\$\%\^\&\*\(\)\_\-\=\+\<\>\,\?]/)==-1){
+		 flag++;
+		 document.getElementById("error6").innerHTML = "password must include 1 special character, ";
+      }
+
+		 var first=password.substr(0,1);
+   if(!(first.match(/[A-Z]/))){
+    document.getElementById("error7").innerHTML = "first letter should be upper case, ";
+		flag++;
+      }
+	 if(conpass != password){
+      document.getElementById("error8").innerHTML = "passward is not matching.";
+			flag++;
+     }
+		 if (flag>0) {
+			 return false;
+		 }
+		 else
+		 	{
+				alert("Thank u");
+			}
+
+
+		 }
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

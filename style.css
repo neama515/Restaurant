@@ -1,0 +1,696 @@
+/**************************menu********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+  
+    padding: 69px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   	flex-wrap: wrap;
+    background-color: rgb(101, 28, 61);
+    width: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0;
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: 700px;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:hover {
+    color: #e4b6c5;
+}
+
+nav .navigation {
+    display: flex;
+}
+
+nav .navigation li {
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+nav .navigation li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+}
+
+nav .navigation li a:hover {
+    color: #e4b6c5;
+}
+
+
+
+.dish {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 5px;
+    border: 15px solid #fff;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.all-d {
+    display: flex;
+    justify-content: center;
+
+}
+
+.all-d .dish .images {
+    width: 100%;
+    height: 250px;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.all-d .dish:hover {
+    transform: translateY(-7px);
+    box-shadow: 8px 8px 20px rgba(0,0,0, .2);
+}
+.dish .text
+ {
+	 position: relative;
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+ }
+ .dish .text .hover
+ {
+	 background-color: rgb(101, 28, 61);
+	 position: absolute;
+	 left: 0;
+	 width: 0%;
+	 display: none;
+ }
+.dish .text:hover .hover
+{
+	width: 100%;
+	opacity: 1;
+ display: block;
+ top: 0;
+ border-radius: 30px;
+ cursor:pointer;
+height: 100%;
+ }
+ .hover h2
+ {
+	 margin-top:5px;
+ }
+.food {
+    background-color: white;
+    background-size: contain;
+    padding: 4rem 0;
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: -5px -5px 8px #3fa0c7;
+    margin: auto;
+}
+
+span {
+    color: rgb(101, 28, 61);
+}
+
+.checkbox--input {
+ 	display: none;
+ }
+
+ .checkbox--label {
+ 	display: none;
+ 	margin-right: 1rem;
+ 	padding: 1rem;
+ 	border-radius: 50%;
+ }
+
+@media screen and (max-width:800px) and (min-width:600px){
+    .all-d {
+        flex-wrap: wrap;
+    }
+
+    .all-d .dish {
+        width: 40%;
+
+    }
+nav .logo
+{
+	margin-left: 250px;
+}
+
+ nav ul{
+	margin-left: 20px;
+}
+}
+
+@media screen and (max-width:600px) {
+    .all-d {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-d .dish {
+        width: 80%;
+        }
+
+    nav .navigation {
+		display: none;
+    	background-color: #fff;
+		width: 100vw;
+
+    }
+
+    nav .navigation li a {
+    	display: flex;
+    	padding: 1rem;
+
+    }
+
+    nav .navigation li:hover {
+    	background-color: #f5f5f5;
+    }
+
+
+
+    nav .navigation li {
+    	margin: 0;
+    }
+
+     nav .navigation li a {
+    	color: #333;
+
+     }
+
+    .checkbox--label {
+ 		display: block;
+ 	}
+
+
+    .checkbox--input:checked ~ .navigation {
+    	display: block;
+
+			opacity: 1;
+    }
+
+    .checkbox--input:checked ~ .checkbox--label {
+    	background-color: #333;
+    }
+
+    i {
+        display: block !important;
+        color: white;
+    }
+	.food
+{
+  width: 50%
+}
+
+
+}
+
+/*.........................................................home..................................................*/
+.first
+{
+
+  min-height:100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+animation-name:ex;
+animation-duration: 15s;
+animation-iteration-count: infinite;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+animation-timing-function: ease;
+}
+.first h1
+{
+	font-size: 70px;
+}
+.first .content
+{
+max-width: 900px;
+text-align: center;
+}
+
+.first .content p{
+  font-size: 1em;
+  color: #fff;
+}
+.dropbtn {
+  background-color: rgb(101, 28, 61);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
+  height: 50px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color:white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {letter-spacing:5px;}
+
+
+
+@keyframes ex {
+  0%{background-image: url(224.jpg);}
+  50%{background-image: url(55555.jpg);}
+	100%{background-image: url(123.jpg);}
+}
+/*.................................................about............................................................*/
+.about
+{
+	display: flex;
+	justify-content: center;
+
+}
+.about .col
+{
+
+	margin-left:10px;
+	line-height: 35px;
+	font-size:25px;
+}
+.about .col h1
+{
+	margin-bottom:10px;
+}
+.about .col img
+{
+      margin-top:15px;
+	height: 350px;
+
+}
+@media screen and (max-width:650px)  {
+	.about
+	{
+		flex-direction: column;
+		align-items: center;
+  }
+	 .col p,h1
+	{
+		width: 100%;
+  }
+	.about .col .img
+	{
+		width: 80%
+		margin:auto;
+	}
+	.about .col img
+	{
+		width: 80%;
+		height: 250px;
+		margin-left: 50px;
+	}
+	
+        .table
+	{
+	overflow-x:auto;
+	}
+
+}
+@media screen and (max-width:800px) and (min-width:600px)
+{.about
+{
+	flex-direction: column;
+	align-items: center;
+}
+ .col p,h1
+{
+	width: 80%;
+	margin: auto;
+}
+.about .col img
+{
+	width: 80%;
+	height: 250px;
+	
+}
+	
+}
+
+
+td {
+ border: 1px solid black;
+}
+th, td {
+ padding: 5px;
+ text-align: left;
+}
+table
+{
+  border: 1px solid black;
+	 width: 60%;
+	margin: auto;
+	margin-top: 70px;
+	border-collapse: collapse;
+}
+th{
+	background-color: rgb(101, 28, 61);
+	border: 1px solid black;
+}
+tr:hover {background-color:#f5f5f5;}
+caption
+{
+	font-size: 50px;
+}
+/*************************************************expert*********************************************************/
+
+.title
+{
+	text-align: center;
+	padding: 50px;
+}
+.titletext{
+  font-size: 50px;
+}
+.contentex
+{
+	display: flex;
+	justify-content: center;
+  flex-wrap:wrap;
+}
+.contentex .boxex
+{
+	width: 250px;
+  margin: 15px;
+  border: 15px solid #fff;
+  box-shadow: 8px 8px 20px rgba(0,0,0, .2);
+ background-color:white;
+}
+.contentex .boxex .imagesex
+{
+position: relative;
+width: 100%;
+height:300px;
+}
+.contentex .boxex .imagesex img
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+}
+.contentex .boxex .textex
+{
+	margin-top: 15px;
+	text-align: center;
+  font-size: 20px;
+  color: rgb(101, 28, 61);
+  font-style: italic;
+}
+.contentex .boxex:hover
+{
+	transform: translateY(-5px);
+	box-shadow: .5px .5px 20px rgba(0,0,0, .2);
+}
+.contentfe
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contentfe .boxfe
+{
+  width: 30%;
+  background-color: white;
+ border: 15px solid #fff;
+box-shadow: 0 5px  35px rgba(0, 0, 0, 0.08);
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-left: 15px;
+margin-top: 10px;
+}
+.contentfe .boxfe .imagesfe
+{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+
+ }
+ .contentfe .boxfe .imagesfe img
+ {
+   position: absolute;
+   object-fit: cover;
+   width: 100%;
+   height : 100%;
+   top: 0px;
+   left: 0;
+   }
+  .contentfe .boxfe .textfe
+  {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+  }
+    .contentfe .boxfe .textfe h3
+    {
+      margin-top: 50px;
+      color: rgb(101, 28, 61);
+    }
+    .contentfe .boxfe:hover
+    {
+    	transform: translateY(-5px);
+    	box-shadow: .5px .5px 20px rgba(0,0,0, .2);
+    }
+@media screen and (max-width:800px) {
+.contentfe
+{
+  flex-direction: column;
+  align-items: center;
+}
+.contentfe .boxfe
+{
+  width: 80%;
+  margin-top: 25px;
+}
+}
+/*********************************form*********************************************/
+
+
+.contentfo
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  background-color: white;
+  box-shadow: 2px 2px 20px rgba(0,0,0, .2);
+  width: 40%;
+
+}
+.contentfo h2
+{
+  margin-bottom: 15px;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.boxfo
+{
+  display: flex;
+  justify-content: center;
+}
+
+table.tform
+{
+  border: none;
+}
+.tform td
+{
+  border:none;
+  padding: 15px;
+}
+.tform td label
+{
+  color: rgb(101, 28, 61);
+}
+
+
+.tform  .submit
+{
+  width: 100px;
+  height: 50px;
+background-color:rgb(101, 28, 61);
+color: white;
+}
+.tform td:not(.gender) input
+{
+  height: 30px;
+  border-radius:5px;
+}
+
+
+
+@media screen and (max-width:800px) {
+.contentfo
+{
+  width: 70%;
+}
+  .tform td
+  {
+    display: block;
+
+  }
+.tform .gender
+{
+  display: flex;
+
+}
+.tform .gender label
+{
+  margin-right: 15px;
+}
+
+.tform td
+{
+  padding: 10px;
+}
+}
+#error,#error9,#error10
+{
+ font-size: 10px;
+ color: rgb(219, 198, 216);
+
+}
+/**********************************************************************/
+
+
+
+
+footer
+{
+
+
+  width: 100%;
+  height:auto;
+  margin-top: 100px;
+  background: url(17.jpg);
+  background-size: 100% 100%;
+  
+
+}
+.contfoot
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer h1
+{
+  text-align: center;
+  padding-top:50px;
+  color: white;
+
+}
+footer .iconsf,.ohour{
+   width: 40%;
+   margin: 50px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+  }
+footer .iconsf a
+{
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+footer .contfoot h2
+{
+  color: white;
+}
+footer .ohour p
+{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+margin-top: 10px;
+}
+@media screen and (max-width:650px) {
+  .contfoot
+  {
+    flex-direction: column;
+  }
+  footer .iconsf
+
+  {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .ohour
+  {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+}
